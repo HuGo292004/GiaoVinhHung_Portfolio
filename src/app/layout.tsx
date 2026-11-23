@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark scroll-smooth ${montserrat.variable} ${geistMono.variable}`}
+      className={`dark ${montserrat.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <head>

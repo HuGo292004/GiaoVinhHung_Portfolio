@@ -3,6 +3,7 @@
 import React from "react";
 import { PortfolioProvider, usePortfolio } from "@/context/PortfolioContext";
 import { Sidebar } from "./Sidebar";
+import { SmoothScrollProvider } from "./SmoothScrollProvider";
 
 function ShellContent({ children }: { children: React.ReactNode }) {
   const { toastVisible, t } = usePortfolio();
@@ -38,8 +39,10 @@ function ShellContent({ children }: { children: React.ReactNode }) {
 
 export function PortfolioShell({ children }: { children: React.ReactNode }) {
   return (
-    <PortfolioProvider>
-      <ShellContent>{children}</ShellContent>
-    </PortfolioProvider>
+    <SmoothScrollProvider>
+      <PortfolioProvider>
+        <ShellContent>{children}</ShellContent>
+      </PortfolioProvider>
+    </SmoothScrollProvider>
   );
 }

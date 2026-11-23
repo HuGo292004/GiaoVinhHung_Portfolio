@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePortfolio } from "@/context/PortfolioContext";
 import { ROLES, TerminalTabKey } from "@/data/portfolio";
+import BlurText from "./BlurText";
 import { SpotlightCard } from "./SpotlightCard";
 
 const TERMINAL_TABS: { key: TerminalTabKey; label: string }[] = [
@@ -43,9 +44,17 @@ export function HeroSection() {
           </span>
         </div>
 
-        <h1 className="font-display text-display-lg-mobile md:text-display-lg text-light-on-surface dark:text-dark-on-surface text-balance">
-          {t.hero_title}
-        </h1>
+        <div role="heading" aria-level={1}>
+          <BlurText
+            key={lang}
+            text={t.hero_title}
+            animateBy="words"
+            direction="bottom"
+            delay={70}
+            trigger="load"
+            className="font-display text-display-lg-mobile md:text-display-lg text-light-on-surface dark:text-dark-on-surface text-balance"
+          />
+        </div>
 
         <div className="flex flex-wrap items-center gap-gutter-sm">
           <button
