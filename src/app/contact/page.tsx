@@ -87,18 +87,6 @@ export default function ContactPage() {
               </span>
               <span>{t.btn_copy_email}</span>
             </button>
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="inline-flex items-center gap-gutter-xs px-gutter-md py-gutter-xs rounded-md bg-light-surface-container-high dark:bg-dark-surface-container-high text-light-on-surface dark:text-dark-on-surface font-label text-label-md hover:text-[#EA4335] dark:hover:text-[#FF8A80] transition-colors"
-            >
-              <span>{t.btn_send_mail}</span>
-              <span
-                className="material-symbols-outlined text-label-lg"
-                aria-hidden="true"
-              >
-                open_in_new
-              </span>
-            </a>
           </div>
         </SpotlightCard>
 
